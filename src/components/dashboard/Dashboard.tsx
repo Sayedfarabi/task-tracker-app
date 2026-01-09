@@ -3,7 +3,7 @@ import { Plus, LogOut, Filter, ListTodo } from "lucide-react";
 import type { Task, TaskPriority, TaskStatus } from "../../types";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { useToast } from "../toast/toast";
-import { clearTasks, fetchTasks } from "../../store/tasksSlice";
+import { clearTasks, fetchTasks, selectAllTasks } from "../../store/tasksSlice";
 import { logout } from "../../store/authSlice";
 import { TaskList } from "./TaskList";
 import { TaskForm } from "./TaskForm";
@@ -20,7 +20,8 @@ export const Dashboard = () => {
   const dispatch = useAppDispatch();
   const { showToast } = useToast();
   const { email, userId } = useAppSelector((state) => state.auth);
-  const { tasks, loading } = useAppSelector((state) => state.tasks);
+  const tasks = useAppSelector(selectAllTasks);
+  const loading = useAppSelector((state) => state.tasks.loading);
 
   useEffect(() => {
     if (userId) {
