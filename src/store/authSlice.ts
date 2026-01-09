@@ -23,12 +23,12 @@ const authSlice = createSlice({
       action: PayloadAction<{ email: string; userId: string; token: string }>
     ) => {
       state.isAuthenticated = true;
-      state.email = action.payload.email;
-      state.userId = action.payload.userId;
-      state.token = action.payload.token;
-      localStorage.setItem("authToken", action.payload.token);
-      localStorage.setItem("userEmail", action.payload.email);
-      localStorage.setItem("userId", action.payload.userId);
+      state.email = action?.payload?.email;
+      state.userId = action?.payload?.userId;
+      state.token = action?.payload?.token;
+      localStorage.setItem("authToken", action?.payload?.token);
+      localStorage.setItem("userEmail", action?.payload?.email);
+      localStorage.setItem("userId", action?.payload?.userId);
     },
     logout: (state) => {
       state.isAuthenticated = false;
