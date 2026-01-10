@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Edit2, Trash2, Calendar, AlertCircle } from "lucide-react";
 import type { Task } from "../../types";
 import { useAppDispatch } from "../../store/hooks";
-import { useToast } from "../toast/toast";
 import { deleteTask } from "../../store/tasksSlice";
+import { useToast } from "../toast/useToast";
 
 interface TaskListProps {
   tasks: Task[];

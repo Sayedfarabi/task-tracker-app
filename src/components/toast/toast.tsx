@@ -1,11 +1,4 @@
-/* eslint-disable react-refresh/only-export-components */
-import {
-  createContext,
-  useContext,
-  useState,
-  useCallback,
-  type ReactNode,
-} from "react";
+import { createContext, useState, useCallback, type ReactNode } from "react";
 import { CheckCircle, XCircle, AlertCircle, X } from "lucide-react";
 
 type ToastType = "success" | "error" | "info";
@@ -16,19 +9,19 @@ interface Toast {
   type: ToastType;
 }
 
-interface ToastContextType {
+export interface ToastContextType {
   showToast: (message: string, type: ToastType) => void;
 }
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
-export const useToast = () => {
-  const context = useContext(ToastContext);
-  if (!context) {
-    throw new Error("useToast must be used within ToastProvider");
-  }
-  return context;
-};
+// export const useToast = () => {
+//   const context = useContext(ToastContext);
+//   if (!context) {
+//     throw new Error("useToast must be used within ToastProvider");
+//   }
+//   return context;
+// };
 
 export const ToastProvider = ({ children }: { children: ReactNode }) => {
   const [toasts, setToasts] = useState<Toast[]>([]);
@@ -75,7 +68,7 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
         {toasts.map((toast) => (
           <div
             key={toast.id}
-            className={`flex items-center gap-3 min-w-[300px] p-4 rounded-lg border shadow-lg animate-slide-in ${getBackgroundColor(
+            className={`flex items-center gap-3 min-w-75 p-4 rounded-lg border shadow-lg animate-slide-in ${getBackgroundColor(
               toast.type
             )}`}
           >

@@ -2,11 +2,11 @@ import { useEffect, useState, useMemo } from "react";
 import { Plus, LogOut, Filter, ListTodo } from "lucide-react";
 import type { Task, TaskPriority, TaskStatus } from "../../types";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { useToast } from "../toast/toast";
 import { clearTasks, fetchTasks, selectAllTasks } from "../../store/tasksSlice";
 import { logout } from "../../store/authSlice";
 import { TaskList } from "./TaskList";
 import { TaskForm } from "./TaskForm";
+import { useToast } from "../toast/useToast";
 
 export const Dashboard = () => {
   const [showForm, setShowForm] = useState(false);
