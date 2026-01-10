@@ -3,7 +3,7 @@ import { X, Plus, Edit } from "lucide-react";
 import type { Task, TaskPriority, TaskStatus } from "../../types";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { createTask, updateTask } from "../../store/tasksSlice";
-import { useToast } from "../toast/useToast";
+import { useToast } from "../toast/toast";
 
 interface TaskFormProps {
   task?: Task | null;

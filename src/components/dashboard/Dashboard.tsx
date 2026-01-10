@@ -6,7 +6,7 @@ import { clearTasks, fetchTasks, selectAllTasks } from "../../store/tasksSlice";
 import { logout } from "../../store/authSlice";
 import { TaskList } from "./TaskList";
 import { TaskForm } from "./TaskForm";
-import { useToast } from "../toast/useToast";
+import { useToast } from "../toast/toast";
 
 export const Dashboard = () => {
   const [showForm, setShowForm] = useState(false);

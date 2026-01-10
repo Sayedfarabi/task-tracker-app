@@ -3,7 +3,7 @@ import { Edit2, Trash2, Calendar, AlertCircle } from "lucide-react";
 import type { Task } from "../../types";
 import { useAppDispatch } from "../../store/hooks";
 import { deleteTask } from "../../store/tasksSlice";
-import { useToast } from "../toast/useToast";
+import { useToast } from "../toast/toast";
 
 interface TaskListProps {
   tasks: Task[];

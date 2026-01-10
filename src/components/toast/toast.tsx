@@ -1,4 +1,11 @@
-import { createContext, useState, useCallback, type ReactNode } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import {
+  createContext,
+  useState,
+  useCallback,
+  type ReactNode,
+  useContext,
+} from "react";
 import { CheckCircle, XCircle, AlertCircle, X } from "lucide-react";
 
 type ToastType = "success" | "error" | "info";
@@ -15,13 +22,13 @@ export interface ToastContextType {
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
-// export const useToast = () => {
-//   const context = useContext(ToastContext);
-//   if (!context) {
-//     throw new Error("useToast must be used within ToastProvider");
-//   }
-//   return context;
-// };
+export const useToast = () => {
+  const context = useContext(ToastContext);
+  if (!context) {
+    throw new Error("useToast must be used within ToastProvider");
+  }
+  return context;
+};
 
 export const ToastProvider = ({ children }: { children: ReactNode }) => {
   const [toasts, setToasts] = useState<Toast[]>([]);

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useAppDispatch } from "../../store/hooks";
 import { login } from "../../store/authSlice";
 import LoginForm from "./LoginForm";
-import { useToast } from "../toast/useToast";
+import { useToast } from "../toast/toast";
 
 const Login = () => {
   const [email, setEmail] = useState("");
