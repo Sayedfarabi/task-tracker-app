@@ -151,7 +151,7 @@ export const Dashboard = () => {
             </div>
             <button
               onClick={handleNewTask}
-              className="flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-all shadow-sm"
+              className="flex items-center justify-center gap-2 px-4 py-2.5 hover:cursor-pointer bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-all shadow-sm"
             >
               <Plus className="w-5 h-5" />
               New Task
