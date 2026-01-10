@@ -168,11 +168,17 @@ export const Dashboard = () => {
                 onChange={(e) =>
                   setFilterStatus(e.target.value as TaskStatus | "all")
                 }
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
               >
-                <option value="all">All</option>
-                <option value="pending">Pending</option>
-                <option value="completed">Completed</option>
+                <option className="text-black" value="all">
+                  All
+                </option>
+                <option className="text-black" value="pending">
+                  Pending
+                </option>
+                <option className="text-black" value="completed">
+                  Completed
+                </option>
               </select>
             </div>
 
@@ -185,12 +191,20 @@ export const Dashboard = () => {
                 onChange={(e) =>
                   setFilterPriority(e.target.value as TaskPriority | "all")
                 }
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
               >
-                <option value="all">All</option>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
+                <option className="text-black" value="all">
+                  All
+                </option>
+                <option className="text-black" value="low">
+                  Low
+                </option>
+                <option className="text-black" value="medium">
+                  Medium
+                </option>
+                <option className="text-black" value="high">
+                  High
+                </option>
               </select>
             </div>
 
@@ -203,10 +217,14 @@ export const Dashboard = () => {
                 onChange={(e) =>
                   setSortBy(e.target.value as "date" | "priority")
                 }
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
               >
-                <option value="date">Due Date</option>
-                <option value="priority">Priority</option>
+                <option className="text-black" value="date">
+                  Due Date
+                </option>
+                <option className="text-black" value="priority">
+                  Priority
+                </option>
               </select>
             </div>
           </div>
