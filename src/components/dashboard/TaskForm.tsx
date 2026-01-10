@@ -120,7 +120,7 @@ export const TaskForm = ({ task, onClose }: TaskFormProps) => {
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
+              className="w-full text-black px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
               placeholder="Enter task title"
               disabled={loading}
             />
@@ -138,7 +138,7 @@ export const TaskForm = ({ task, onClose }: TaskFormProps) => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={4}
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all resize-none"
+              className="w-full text-black px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all resize-none"
               placeholder="Enter task description"
               disabled={loading}
             />
@@ -157,7 +157,7 @@ export const TaskForm = ({ task, onClose }: TaskFormProps) => {
                 type="date"
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
+                className="w-full text-black px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
                 disabled={loading}
               />
             </div>
@@ -173,7 +173,7 @@ export const TaskForm = ({ task, onClose }: TaskFormProps) => {
                 id="status"
                 value={status}
                 onChange={(e) => setStatus(e.target.value as TaskStatus)}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
+                className="w-full text-black px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
                 disabled={loading}
               >
                 <option value="pending">Pending</option>
